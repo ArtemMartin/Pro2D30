@@ -1,0 +1,67 @@
+-------------------------------------------------------------------------
+31.10.2018
+101.PEXOTA
+1B                           2B                            3B
+Xc= 23131                    Xc= 23131                     Xc= 23131 
+Yc= 96938                    Yc= 96938                     Yc= 96938 
+hc= 150                      hc= 150                       hc= 150 
+N OP=85                      N OP=86                       N OP=87
+OH= 5500                     OH= 5500                      OH= 5500 
+*POLNAIA PODG*               *POLNAIA PODG*                *POLNAIA PODG*
+ZARIAD=TRETIY                ZARIAD=TRETIY                 ZARIAD=TRETIY
+Sn/Vz=OF/AR5                 Sn/Vz=OF/AR5                  Sn/Vz=OF/AR5
+PRICEL= 562                  PRICEL= 511                   PRICEL= 393 
+N= 30                        N= 27                         N= 21 
+Dovorot OH= 279              Dovorot OH= 275               Dovorot OH= 353 
+Veer= 0                      Veer= 0                       Veer= 0 
+Sk\Shk= 0                    Sk\Shk= 0                     Sk\Shk= 0 
+dX/dNtus= 6.5 / 0            dX/dNtus= 7.3 / 0             dX/dNtus= 10 / 0 
+ts= 33                       ts= 31                        ts= 25 
+Dt/dD= 7765 / 161            Dt/dD= 7455 / 156             Dt/dD= 6423 / 137 
+Yg.t/dDov= 5789 /-10         Yg.t/dDov= 5784 /-9           Yg.t/dDov= 5858 /-6 
+Yroven=-6                    Yroven=-6                     Yroven=-6 
+Yst.Vzr=VUSOKI!!!            Yst.Vzr=VUSOKI!!!             Yst.Vz=NIZKI!!!
+-------------------------------------------------------------------------
+102.PEX.YKR
+1B                           2B                            3B
+Xc= 24863                    Xc= 24863                     Xc= 24863 
+Yc= 95938                    Yc= 95938                     Yc= 95938 
+hc= 180                      hc= 180                       hc= 180 
+N OP=85                      N OP=86                       N OP=87
+OH= 5500                     OH= 5500                      OH= 5500 
+*POLNAIA PODG*               *POLNAIA PODG*                *POLNAIA PODG*
+ZARIAD=VTOROY                ZARIAD=VTOROY                 ZARIAD=VTOROY
+Sn/Vz=OF/AR5                 Sn/Vz=OF/AR5                  Sn/Vz=OF/AR5
+PRICEL= 663                  PRICEL= 584                   PRICEL= 456 
+N= 38                        N= 34                         N= 27 
+Dovorot OH= 216              Dovorot OH= 211               Dovorot OH= 265 
+Veer= 0                      Veer= 0                       Veer= 0 
+Sk\Shk= 0                    Sk\Shk= 0                     Sk\Shk= 0 
+dX/dNtus= 5.6 / 0            dX/dNtus= 7.6 / 0             dX/dNtus= 11 / 0 
+ts= 40                       ts= 37                        ts= 31 
+Dt/dD= 9693 / 171            Dt/dD= 9386 / 185             Dt/dD= 8317 / 185 
+Yg.t/dDov= 5730 /-14         Yg.t/dDov= 5724 /-14          Yg.t/dDov= 5774 /-9 
+Yroven=-2                    Yroven=-2                     Yroven=-1 
+Yst.Vzr=VUSOKI!!!            Yst.Vzr=VUSOKI!!!             Yst.Vzr=VUSOKI!!!
+-------------------------------------------------------------------------
+103.BOP
+1B                           2B                            3B
+Xc= 12000                    Xc= 12000                     Xc= 12000 
+Yc= 87000                    Yc= 87000                     Yc= 87000 
+hc= 150                      hc= 150                       hc= 150 
+N OP=86                      N OP=                         N OP=
+OH= 4500                     OH= 0                         OH= 0 
+*POLNAIA PODG*               *POLNAIA PODG*                *POLNAIA PODG*
+ZARIAD=POLNIY                ZARIAD=POLNIY                 ZARIAD=POLNIY
+Sn/Vz=OF/RGM                 Sn/Vz=OF/RGM                  Sn/Vz=OF/RGM
+PRICEL= 419                  PRICEL= 720                   PRICEL= 720 
+0                            0                             0
+Dovorot OH=-303              Dovorot OH= 1330              Dovorot OH= 1330 
+Veer= 0                      Veer= 0                       Veer= 0 
+Sk\Shk= 0                    Sk\Shk= 0                     Sk\Shk= 0 
+dX/dNtus= 14 / 0             dX/dNtus= 1 / 0               dX/dNtus= 1 / 0 
+ts= 39                       ts= 61                        ts= 61 
+Dt/dD= 12235 / 510           Dt/dD= 87823 /-67             Dt/dD= 87823 /-67 
+Yg.t/dDov= 4193 / 4          Yg.t/dDov= 1369 /-39          Yg.t/dDov= 1369 /-39 
+Yroven=-4                    Yroven= 2                     Yroven= 2 
+0                            0                             0

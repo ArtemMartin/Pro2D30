@@ -1,0 +1,19 @@
+10 CLS : PRINT TAB(30); "BLOKNOT SOBA"
+11 INPUT "Kto strel. 0-Batareia, 1-Vzvod"; ktostr
+        IF ktostr = 0 THEN INPUT " OTN 1,2,3,4,5,6"; t1, t2, t3, t4, t5, t6
+        IF ktostr = 1 THEN INPUT "OTN 1,2,3"; t1, t2, t3
+20 INPUT "Snariad 0-OF, 1-3SH, 2-C4, 3-D4"; snar
+30 INPUT "Vzrivatel 0-RGM, 1-AR5, 2-V90, 3-DTM75, 4-T90"; vzriv
+        IF vzriv = 0 THEN INPUT "Ystanovka vzrivatelia 0-Oskol, 1-Fygas, 2-Zamedlen, 3-Osk.i.Fyg, 4-Osk.Fyg.Zamed"; ystvzr
+        IF vzriv <> 0 THEN INPUT "Trybka ="; tryb
+40 INPUT "Zariad 0-Poln, 5-Ymensh, 1-Perv, 2-Vtor, 3-Tret, 4-Chetvert"; zar
+50 INPUT "Pricel,Skachek = "; pric, skach
+60 INPUT "Dovorot="; dovor
+70 INPUT "Veer 0-Soedinit, 1-Razdelit"; veer
+   IF veer = 1 THEN INPUT "Ystanovki 0-Odna, 1-Dve"; yst
+   IF yst = 1 THEN INPUT "Skolko dovernyt?"; dover
+80
+   PRINT "KOMANDA"; TAB(10); "PRICEL"; TAB(20); "DOVOROT"; TAB(30); "1-i"; TAB(38); "2-i"; TAB(46); "3-i"; TAB(54);
+   PRINT "4-i"; TAB(62); "5-i"; TAB(70); "6-i"
+   PRINT TAB(30); "Pr.Ygl"; TAB(38); "Pr.Ygl"; TAB(46); "Pr.Ygl"; TAB(54); "Pr.Ygl"; TAB(62); "Pr.Ygl"; TAB(70); "Pr.Ygl"
+
