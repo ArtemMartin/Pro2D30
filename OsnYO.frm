@@ -15,12 +15,13 @@ Begin VB.MDIForm OsnYO
       Height          =   660
       Left            =   0
       ScaleHeight     =   600
-      ScaleWidth      =   20190
+      ScaleWidth      =   13725
       TabIndex        =   0
       Top             =   0
-      Width           =   20250
+      Width           =   13785
       Begin VB.CommandButton Command8 
          Caption         =   "огн"
+         Enabled         =   0   'False
          BeginProperty Font 
             Name            =   "Bookman Old Style"
             Size            =   14.25
@@ -91,6 +92,7 @@ Begin VB.MDIForm OsnYO
       End
       Begin VB.CommandButton Command4 
          Caption         =   "пеоеп"
+         Enabled         =   0   'False
          BeginProperty Font 
             Name            =   "Cambria"
             Size            =   14.25

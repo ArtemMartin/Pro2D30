@@ -22,6 +22,7 @@ Begin VB.Form OZ
    Begin VB.CommandButton okPopravki 
       BackColor       =   &H00FF8080&
       Caption         =   " ÓÏ‡Ì‰‡"
+      Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "Cambria"
          Size            =   14.25
@@ -1900,7 +1901,7 @@ Public Aw02, Aw04, Aw08, Aw12, Aw16, Aw20, Aw24, Aw30, Aw40Aw50, Aw60 As Single
 Public W02, W04, W08, W12, W16, W20, W24, W30, W40, W50, W60 As Single
 Public Snar1, Snar2, Snar3 As String
 Public Vzriv1, Vzriv2, Vzriv3, zar1, zar2, zar3 As String
-Public xc, yc, hc, Frc, Glc, Ac, Dc, Mc, Alev, Aprav, Mclev, Mcprav As Single
+Public Xc, Yc, hc, Frc, Glc, Ac, Dc, Mc, Alev, Aprav, Mclev, Mcprav As Single
 Public Pric1, Pric2, Pric3, N1, N2, N3, Dovor1, Dovor2, Dovor3, Veer1, Veer2, Veer3, Sk1, Sk2, Sk3 As Single
 Public dXtus1, dXtus2, dXtus3, dNtus1, dNtus2, dNtus3, ts1, ts2, ts3, Vustr1, Vustr2, Vustr3, Vd1, Vd2, Vd3, Dt1, Dt2, Dt3 As Single
 Public Ygolt1, Ygolt2, Ygolt3, Dovort1, Dovort2, Dovort3, Yr1, Yr2, Yr3, dD1, dD2, dD3, Disch1, Disch2, Disch3, dDov1, dDv2, dDov3 As Single
@@ -1986,7 +1987,7 @@ otprkomandy.Show
 End Sub
 
 Private Sub OZAD_Click()
-Dim Ac As Single, Dc As Single, Mc As Single, nkp As Single, Xkp As Single, Ykp As Single, hkp As Single, xc As Single, yc As Single, hc As Single
+Dim Ac As Single, Dc As Single, Mc As Single, nkp As Single, Xkp As Single, Ykp As Single, hkp As Single, Xc As Single, Yc As Single, hc As Single
 Dim dDov1 As Single, Dret1 As Single, dDr1 As Single, dN As Single
 Dim rep1 As String, rep2 As String, rep3 As String
 
@@ -2003,10 +2004,10 @@ If nkp = 1 Then
     Else
     Xkp = BP.pXkp5: Ykp = BP.pYkp5: hkp = BP.phkp5
 End If
- xc = Cos(Ac / 100 * 6 * Pi / 180) * Dc + Xkp
-yc = Sin(Ac / 100 * 6 * Pi / 180) * Dc + Ykp
+ Xc = Cos(Ac / 100 * 6 * Pi / 180) * Dc + Xkp
+Yc = Sin(Ac / 100 * 6 * Pi / 180) * Dc + Ykp
 hc = (Mc * (Dc * 0.001)) * 1.05 + hkp
-pXc.Text = Int(xc): pYc.Text = Int(yc): phc.Text = Int(hc)
+pXc.Text = Int(Xc): pYc.Text = Int(Yc): phc.Text = Int(hc)
 
 'Á‡ÔËÒ‡Ú¸ ÌÓÏÂ ˆÂÎË ‚ Ù‡ÈÎ
 Open App.Path & "\numberZeli" For Output As #1
@@ -2020,14 +2021,14 @@ ras = 0: h = BP.ph: hop1 = BP.ph1: tz1 = BP.pTz1: hmet = BP.phmet: stre = pStre1
 If h = 0 Then h = 750
 215: dhh1 = (h - 750) + ((hmet - hop1) / 10)
    If zo11 = 1 Then
-   xc = Xc1: yc = Yc1: hc = hc
+   Xc = Xc1: Yc = Yc1: hc = hc
    Else
-   xc = pXc: yc = pYc: hc = phc
+   Xc = pXc: Yc = pYc: hc = phc
    End If
-   Xc1 = xc: Yc1 = yc: hc1 = hc
+   Xc1 = Xc: Yc1 = Yc: hc1 = hc
    Xop1 = BP.pX1: Yop1 = BP.pY1: hop1 = BP.ph1: OH1 = BP.pOH1
-   dx1 = xc - Xop1
-60: dy1 = yc - Yop1
+   dx1 = Xc - Xop1
+60: dy1 = Yc - Yop1
 61: dh1 = hc - hop1
    Pi = 3.14159265358
 9010: Dt1 = Int(Sqr(dx1 ^ 2 + dy1 ^ 2) + 0.001)
@@ -2185,7 +2186,7 @@ End If
        daep = kpe * Yr1: preps1 = CInt(Pric1 + daep)
        End If
        If vzriv = "–√Ã" Then dNtus1 = 0
-        Xc1 = xc: Yc1 = yc: hc1 = hc
+        Xc1 = Xc: Yc1 = Yc: hc1 = hc
         Fr = pFrontc: Gl = pGlybinac
         veer = Int(Fr / ((Dt1 + 0.001) / 1000) * 0.95)
         Sk = Int((Gl + 0.001) / 3 / (dXtus + 0.001))
@@ -2207,13 +2208,13 @@ vrv = 0
 104111: ras = 0: hop2 = BP.ph2: Xop2 = BP.pX2: Yop2 = BP.pY2: OH2 = BP.pOH2: N = 0: dNtus = 0: stre = pStre2
 2151: dhh2 = (h - 750) + ((hmet - hop2) / 10)
         If zo11 = 1 Then
-         xc = Xc2: yc = Yc2: hc = hc
+         Xc = Xc2: Yc = Yc2: hc = hc
          Else
-         xc = xc: yc = yc: hc = hc
+         Xc = Xc: Yc = Yc: hc = hc
          End If
-         Xc2 = xc: Yc2 = yc: hc2 = hc
-        dx2 = xc - Xop2
-104112:  dy2 = yc - Yop2
+         Xc2 = Xc: Yc2 = Yc: hc2 = hc
+        dx2 = Xc - Xop2
+104112:  dy2 = Yc - Yop2
 104113:  dh2 = hc - hop2
 104114:  Dt2 = Int(Sqr(dx2 ^ 2 + dy2 ^ 2))
 104115:  Yr2 = CInt((dh2 / (Dt2 * 0.001 + 0.1)) * 0.95)
@@ -2365,7 +2366,7 @@ If snar = "Œ‘" Or snar = "3Œ‘56" And vzriv = "–√Ã" Then
        daep = kpe * Yr2: preps2 = Int(Pric2 + daep)
        End If
        If vzriv = "–√Ã" Then dNtus2 = 0
-      Xc2 = xc: Yc2 = yc: hc2 = hc
+      Xc2 = Xc: Yc2 = Yc: hc2 = hc
               Fr = pFrontc: Gl = pGlybinac
         veer = Int(Fr / ((Dt2 + 0.001) / 1000) * 0.95)
         Sk = Int((Gl + 0.001) / 3 / (dXtus + 0.001))
@@ -2387,13 +2388,13 @@ vrv = 0
 1041193: ras = 0: Xop3 = BP.pX3: Yop3 = BP.pY3: hop3 = BP.ph3: OH3 = BP.pOH3: N = 0: dNtus = 0: stre = pStre3
 2152: dhh3 = (h - 750) + ((hmet - hop3) / 10)
         If zo11 = 1 Then
-          xc = Xc3: yc = Yc3: hc = hc
+          Xc = Xc3: Yc = Yc3: hc = hc
           Else
-          xc = xc: yc = yc: hc = hc
+          Xc = Xc: Yc = Yc: hc = hc
           End If
-          Xc3 = xc: Yc3 = yc: hc3 = hc
-         dx3 = xc - Xop3
-1041194:  dy3 = yc - Yop3
+          Xc3 = Xc: Yc3 = Yc: hc3 = hc
+         dx3 = Xc - Xop3
+1041194:  dy3 = Yc - Yop3
 1041195:  dh3 = hc - hop3
 1041196:   Dt3 = Int(Sqr(dx3 ^ 2 + dy3 ^ 2))
 1041197:   Yr3 = CInt((dh3 / (Dt3 * 0.001 + 0.1)) * 0.95)
@@ -2548,7 +2549,7 @@ If snar = "Œ‘" Or snar = "3Œ‘56" And vzriv = "–√Ã" Then
        daep = kpe * Yr3: preps3 = Int(Pric3 + daep)
        End If
        If vzriv = "–√Ã" Then dNtus3 = 0
-       Xc3 = xc: Yc3 = yc: hc3 = hc
+       Xc3 = Xc: Yc3 = Yc: hc3 = hc
                Fr = pFrontc: Gl = pGlybinac
         veer = Int(Fr / ((Dt3 + 0.001) / 1000) * 0.95)
         Sk = Int((Gl + 0.001) / 3 / (dXtus + 0.001))
@@ -2641,8 +2642,8 @@ End If
   Ycso = Sin(Alev / 100 * 6 * 3.141592 / 180) * Dlev + Ykpl
   If Mcl = 0 Then hc = Mcp * (Dprav * 0.001) * 1.05 + hkpp
   If Mcp = 0 Then hc = Mcl * (Dlev * 0.001) * 1.05 + hkpl
-  xc = Xcso: yc = Ycso
-  pXc.Text = Int(xc): pYc.Text = Int(yc): phc.Text = Int(hc)
+  Xc = Xcso: Yc = Ycso
+  pXc.Text = Int(Xc): pYc.Text = Int(Yc): phc.Text = Int(hc)
 
    '1B
 50:
@@ -2650,14 +2651,14 @@ ras = 0: h = BP.ph: hop1 = BP.ph1: tz1 = BP.pTz1: hmet = BP.phmet: stre = pStre1
 If h = 0 Then h = 750
 215: dhh1 = (h - 750) + ((hmet - hop1) / 10)
    If zo11 = 1 Then
-   xc = Xc1: yc = Yc1: hc = hc
+   Xc = Xc1: Yc = Yc1: hc = hc
    Else
-   xc = pXc: yc = pYc: hc = phc
+   Xc = pXc: Yc = pYc: hc = phc
    End If
-   Xc1 = xc: Yc1 = yc: hc1 = hc
+   Xc1 = Xc: Yc1 = Yc: hc1 = hc
    Xop1 = BP.pX1: Yop1 = BP.pY1: hop1 = BP.ph1: OH1 = BP.pOH1
-   dx1 = xc - Xop1
-60: dy1 = yc - Yop1
+   dx1 = Xc - Xop1
+60: dy1 = Yc - Yop1
 61: dh1 = hc - hop1
    Pi = 3.14159265358
 9010: Dt1 = Int(Sqr(dx1 ^ 2 + dy1 ^ 2) + 0.001)
@@ -2810,7 +2811,7 @@ End If
        daep = kpe * Yr1: preps1 = CInt(Pric1 + daep)
        End If
        If vzriv = "–√Ã" Then dNtus1 = 0
-        Xc1 = xc: Yc1 = yc: hc1 = hc
+        Xc1 = Xc: Yc1 = Yc: hc1 = hc
                 Fr = pFrontc: Gl = pGlybinac
         veer = Int(Fr / ((Dt1 + 0.001) / 1000) * 0.95)
         Sk = Int((Gl + 0.001) / 3 / (dXtus + 0.001))
@@ -2832,13 +2833,13 @@ vrv = 0
 104111: ras = 0: hop2 = BP.ph2: Xop2 = BP.pX2: Yop2 = BP.pY2: OH2 = BP.pOH2: N = 0: dNtus = 0: stre = pStre2
 2151: dhh2 = (h - 750) + ((hmet - hop2) / 10)
         If zo11 = 1 Then
-         xc = Xc2: yc = Yc2: hc = hc
+         Xc = Xc2: Yc = Yc2: hc = hc
          Else
-         xc = xc: yc = yc: hc = hc
+         Xc = Xc: Yc = Yc: hc = hc
          End If
-         Xc2 = xc: Yc2 = yc: hc2 = hc
-        dx2 = xc - Xop2
-104112:  dy2 = yc - Yop2
+         Xc2 = Xc: Yc2 = Yc: hc2 = hc
+        dx2 = Xc - Xop2
+104112:  dy2 = Yc - Yop2
 104113:  dh2 = hc - hop2
 104114:  Dt2 = Int(Sqr(dx2 ^ 2 + dy2 ^ 2))
 104115:  Yr2 = CInt((dh2 / (Dt2 * 0.001 + 0.1)) * 0.95)
@@ -2990,7 +2991,7 @@ If snar = "Œ‘" Or snar = "3Œ‘56" And vzriv = "–√Ã" Then
        daep = kpe * Yr2: preps2 = Int(Pric2 + daep)
        End If
        If vzriv = "–√Ã" Then dNtus2 = 0
-      Xc2 = xc: Yc2 = yc: hc2 = hc
+      Xc2 = Xc: Yc2 = Yc: hc2 = hc
               Fr = pFrontc: Gl = pGlybinac
         veer = Int(Fr / ((Dt2 + 0.001) / 1000) * 0.95)
         Sk = Int((Gl + 0.001) / 3 / (dXtus + 0.001))
@@ -3012,13 +3013,13 @@ vrv = 0
 1041193: ras = 0: Xop3 = BP.pX3: Yop3 = BP.pY3: hop3 = BP.ph3: OH3 = BP.pOH3: N = 0: dNtus = 0: stre = pStre3
 2152: dhh3 = (h - 750) + ((hmet - hop3) / 10)
         If zo11 = 1 Then
-          xc = Xc3: yc = Yc3: hc = hc
+          Xc = Xc3: Yc = Yc3: hc = hc
           Else
-          xc = xc: yc = yc: hc = hc
+          Xc = Xc: Yc = Yc: hc = hc
           End If
-          Xc3 = xc: Yc3 = yc: hc3 = hc
-         dx3 = xc - Xop3
-1041194:  dy3 = yc - Yop3
+          Xc3 = Xc: Yc3 = Yc: hc3 = hc
+         dx3 = Xc - Xop3
+1041194:  dy3 = Yc - Yop3
 1041195:  dh3 = hc - hop3
 1041196:   Dt3 = Int(Sqr(dx3 ^ 2 + dy3 ^ 2))
 1041197:   Yr3 = CInt((dh3 / (Dt3 * 0.001 + 0.1)) * 0.95)
@@ -3173,7 +3174,7 @@ If snar = "Œ‘" Or snar = "3Œ‘56" And vzriv = "–√Ã" Then
        daep = kpe * Yr3: preps3 = Int(Pric3 + daep)
        End If
        If vzriv = "–√Ã" Then dNtus3 = 0
-       Xc3 = xc: Yc3 = yc: hc3 = hc
+       Xc3 = Xc: Yc3 = Yc: hc3 = hc
                Fr = pFrontc: Gl = pGlybinac
         veer = Int(Fr / ((Dt3 + 0.001) / 1000) * 0.95)
         Sk = Int((Gl + 0.001) / 3 / (dXtus + 0.001))
@@ -3223,14 +3224,14 @@ ras = 0: h = BP.ph: hop1 = BP.ph1: tz1 = BP.pTz1: hmet = BP.phmet: stre = pStre1
 If h = 0 Then h = 750
 215: dhh1 = (h - 750) + ((hmet - hop1) / 10)
    If zo11 = 1 Then
-   xc = Xc1: yc = Yc1: hc = hc
+   Xc = Xc1: Yc = Yc1: hc = hc
    Else
-   xc = pXc: yc = pYc: hc = phc
+   Xc = pXc: Yc = pYc: hc = phc
    End If
-   Xc1 = xc: Yc1 = yc: hc1 = hc
+   Xc1 = Xc: Yc1 = Yc: hc1 = hc
    Xop1 = BP.pX1: Yop1 = BP.pY1: hop1 = BP.ph1: OH1 = BP.pOH1
-   dx1 = xc - Xop1
-60: dy1 = yc - Yop1
+   dx1 = Xc - Xop1
+60: dy1 = Yc - Yop1
 61: dh1 = hc - hop1
    Pi = 3.14159265358
 9010: Dt1 = Int(Sqr(dx1 ^ 2 + dy1 ^ 2) + 0.001)
@@ -3383,7 +3384,7 @@ End If
        daep = kpe * Yr1: preps1 = CInt(Pric1 + daep)
        End If
        If vzriv = "–√Ã" Then dNtus1 = 0
-        Xc1 = xc: Yc1 = yc: hc1 = hc
+        Xc1 = Xc: Yc1 = Yc: hc1 = hc
                 Fr = pFrontc: Gl = pGlybinac
         veer = Int(Fr / ((Dt1 + 0.001) / 1000) * 0.95)
         Sk = Int((Gl + 0.001) / 3 / (dXtus + 0.001))
@@ -3404,13 +3405,13 @@ vrv = 0
 104111: ras = 0: hop2 = BP.ph2: Xop2 = BP.pX2: Yop2 = BP.pY2: OH2 = BP.pOH2: N = 0: dNtus = 0: stre = pStre2
 2151: dhh2 = (h - 750) + ((hmet - hop2) / 10)
         If zo11 = 1 Then
-         xc = Xc2: yc = Yc2: hc = hc
+         Xc = Xc2: Yc = Yc2: hc = hc
          Else
-         xc = xc: yc = yc: hc = hc
+         Xc = Xc: Yc = Yc: hc = hc
          End If
-         Xc2 = xc: Yc2 = yc: hc2 = hc
-        dx2 = xc - Xop2
-104112:  dy2 = yc - Yop2
+         Xc2 = Xc: Yc2 = Yc: hc2 = hc
+        dx2 = Xc - Xop2
+104112:  dy2 = Yc - Yop2
 104113:  dh2 = hc - hop2
 104114:  Dt2 = Int(Sqr(dx2 ^ 2 + dy2 ^ 2))
 104115:  Yr2 = CInt((dh2 / (Dt2 * 0.001 + 0.1)) * 0.95)
@@ -3562,7 +3563,7 @@ If snar = "Œ‘" Or snar = "3Œ‘56" And vzriv = "–√Ã" Then
        daep = kpe * Yr2: preps2 = Int(Pric2 + daep)
        End If
        If vzriv = "–√Ã" Then dNtus2 = 0
-      Xc2 = xc: Yc2 = yc: hc2 = hc
+      Xc2 = Xc: Yc2 = Yc: hc2 = hc
               Fr = pFrontc: Gl = pGlybinac
         veer = Int(Fr / ((Dt2 + 0.001) / 1000) * 0.95)
         Sk = Int((Gl + 0.001) / 3 / (dXtus + 0.001))
@@ -3584,13 +3585,13 @@ vrv = 0
 1041193: ras = 0: Xop3 = BP.pX3: Yop3 = BP.pY3: hop3 = BP.ph3: OH3 = BP.pOH3: N = 0: dNtus = 0: stre = pStre3
 2152: dhh3 = (h - 750) + ((hmet - hop3) / 10)
         If zo11 = 1 Then
-          xc = Xc3: yc = Yc3: hc = hc
+          Xc = Xc3: Yc = Yc3: hc = hc
           Else
-          xc = xc: yc = yc: hc = hc
+          Xc = Xc: Yc = Yc: hc = hc
           End If
-          Xc3 = xc: Yc3 = yc: hc3 = hc
-         dx3 = xc - Xop3
-1041194:  dy3 = yc - Yop3
+          Xc3 = Xc: Yc3 = Yc: hc3 = hc
+         dx3 = Xc - Xop3
+1041194:  dy3 = Yc - Yop3
 1041195:  dh3 = hc - hop3
 1041196:   Dt3 = Int(Sqr(dx3 ^ 2 + dy3 ^ 2))
 1041197:   Yr3 = CInt((dh3 / (Dt3 * 0.001 + 0.1)) * 0.95)
@@ -3745,7 +3746,7 @@ If snar = "Œ‘" Or snar = "3Œ‘56" And vzriv = "–√Ã" Then
        daep = kpe * Yr3: preps3 = Int(Pric3 + daep)
        End If
        If vzriv = "–√Ã" Then dNtus3 = 0
-       Xc3 = xc: Yc3 = yc: hc3 = hc
+       Xc3 = Xc: Yc3 = Yc: hc3 = hc
                Fr = pFrontc: Gl = pGlybinac
         veer = Int(Fr / ((Dt3 + 0.001) / 1000) * 0.95)
         Sk = Int((Gl + 0.001) / 3 / (dXtus + 0.001))
@@ -4122,7 +4123,7 @@ Function podSOPR() As Single
   Ycso = Sin(Alev / 100 * 6 * 3.141592 / 180) * Dlev + Yl
   If Mcl = 0 Then hc = Mcp * (Dprav * 0.001) * 1.05 + hp
   If Mcp = 0 Then hc = Mcl * (Dlev * 0.001) * 1.05 + hl
-  xc = Xcso: yc = Ycso
+  Xc = Xcso: Yc = Ycso
   End Function
 
   ''''''''''''''''''''''dV0 podprog''''''''''''''''''''''''''''''''''''''''''''''
@@ -4528,10 +4529,10 @@ End If
   End Function
   
 Function YGLUKNP(Dtkp, Yrkp, Ygoltkp, ByVal Xkp As Single, ByVal Ykp As Single, ByVal hkp As Single) As Single
-  Dim xc As Single, yc As Single, hc As Single
-  xc = OZ.pXc: yc = OZ.pYc: hc = OZ.phc
-   dx = xc - Xkp
- dy = yc - Ykp
+  Dim Xc As Single, Yc As Single, hc As Single
+  Xc = OZ.pXc: Yc = OZ.pYc: hc = OZ.phc
+   dx = Xc - Xkp
+ dy = Yc - Ykp
  dh = hc - hkp
    Pi = 3.14159265358
  Dtkp = Round(Sqr(dx ^ 2 + dy ^ 2))
@@ -4550,29 +4551,29 @@ End Sub
 Private Sub pplZel_Click()
 Dim z(1 To 10) As String
 Dim nz As String
-Dim xc As Single, yc As Single, hc As Single, Fr As Single, Gl As Single
+Dim Xc As Single, Yc As Single, hc As Single, Fr As Single, Gl As Single
 nz = pplZel
 1011 Open "D:\YO_NA\Zeli" For Input As #1
 101111 If EOF(1) Then GoTo 1012
    Input #1, z(1), z(2), z(3), z(4), z(5), z(6)
-   If z(1) = nz Then xc = z(2): yc = z(3): hc = z(4): Fr = z(5): Gl = z(6): GoTo 1012
+   If z(1) = nz Then Xc = z(2): Yc = z(3): hc = Val(z(4)): Fr = z(5): Gl = z(6): GoTo 1012
         GoTo 101111
 1012 Close #1
-pXc.Text = xc: pYc.Text = yc: phc.Text = hc: pFrontc.Text = Fr: pGlybinac.Text = Gl
+pXc.Text = Xc: pYc.Text = Yc: phc.Text = hc: pFrontc.Text = Fr: pGlybinac.Text = Gl
 End Sub
 Private Sub pplZel_KeyDown(KeyCode As Integer, Shift As Integer)
 Dim z(1 To 10) As String
 Dim nz As String
-Dim xc As Single, yc As Single, hc As Single
+Dim Xc As Single, Yc As Single, hc As Single
 nz = pplZel
 If KeyCode = 13 Then
 1011    Open "D:\YO_NA\zeli" For Input As #1
 101111  If EOF(1) Then GoTo 1012
    Input #1, z(1), z(2), z(3), z(4), z(5), z(6)
-   If z(1) = nz Then xc = z(2): yc = z(3): hc = z(4): Fr = z(5): Gl = z(6): GoTo 1012
+   If z(1) = nz Then Xc = z(2): Yc = z(3): hc = z(4): Fr = z(5): Gl = z(6): GoTo 1012
         GoTo 101111
 1012    Close #1
-pXc.Text = xc: pYc.Text = yc: phc.Text = hc: pFrontc.Text = Fr: pGlybinac.Text = Gl
+pXc.Text = Xc: pYc.Text = Yc: phc.Text = hc: pFrontc.Text = Fr: pGlybinac.Text = Gl
     Else
 End If
 End Sub

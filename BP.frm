@@ -16,8 +16,8 @@ Begin VB.Form BP
    EndProperty
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
-   ScaleHeight     =   10935
-   ScaleWidth      =   20250
+   ScaleHeight     =   3030
+   ScaleWidth      =   4560
    WindowState     =   2  'Maximized
    Begin VB.CommandButton Command5 
       BackColor       =   &H008080FF&
@@ -61,6 +61,7 @@ Begin VB.Form BP
    Begin VB.CommandButton Command3 
       BackColor       =   &H0080FF80&
       Caption         =   " ¿–“¿"
+      Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "Cambria"
          Size            =   15.75
@@ -1903,7 +1904,7 @@ Dim MyFile
 vvod = 0
 dmk = pDMK
 If dmk = False Then vvod = 1:
-hmet = phmet: Tv = pTv: h = pH: Aw = pAw: W = pW
+hmet = phmet: Tv = pTv: h = ph: Aw = pAw: W = pW
 If dmk = False Then Dsnos = pW: Aw = Aw - 100
         If Aw <= 0 Then Aw = Aw + 6000
         pAw02.Text = Aw / 100 + 1: pAw04.Text = Aw / 100 + 2: pAw08.Text = Aw / 100 + 3: pAw12.Text = Aw / 100 + 3: pAw16.Text = Aw / 100 + 4: pAw20.Text = Aw / 100 + 4: pAw24.Text = Aw / 100 + 4: pAw30.Text = Aw / 100 + 5: pAw40.Text = Aw / 100 + 5: pAw50.Text = Aw / 100 + 5: pAw60.Text = Aw / 100 + 5
@@ -2115,7 +2116,7 @@ phmet.Text = t(1): h = t(2)
     Else
         h = h + 750
     End If
-    pH.Text = h
+    ph.Text = h
 GoTo 5
 Else
 End If
@@ -2695,8 +2696,8 @@ End If
 End Sub
 Private Sub phmet_KeyPress(KeyAscii As Integer)
 If KeyAscii = 13 Then
-pH.Text = ""
-pH.SetFocus
+ph.Text = ""
+ph.SetFocus
 End If
 End Sub
 Private Sub pH_KeyPress(KeyAscii As Integer)

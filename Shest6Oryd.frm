@@ -6,13 +6,14 @@ Begin VB.Form Shest6Oryd
    ClientTop       =   450
    ClientWidth     =   11925
    LinkTopic       =   "Form1"
-   ScaleHeight     =   14775
-   ScaleWidth      =   18960
+   ScaleHeight     =   7395
+   ScaleWidth      =   11925
    StartUpPosition =   1  'CenterOwner
    WindowState     =   2  'Maximized
    Begin VB.CommandButton otprKom 
       BackColor       =   &H00FF8080&
       Caption         =   "Отправить команду"
+      Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "Bookman Old Style"
          Size            =   15.75
@@ -3641,39 +3642,35 @@ labeOr9 = t(1)
 Close #1
 End Sub
 
-Private Sub Label61_Click()
-
-End Sub
-
 Private Sub nPlZeli_Click()
 Dim nz As String
 Dim t(10) As String
-Dim xc As Single, yc As Single, hc As Single, Frc As Single, Glc As Single
+Dim Xc As Single, Yc As Single, hc As Single, Frc As Single, Glc As Single
 nz = nPlZeli
 1011 Open "D:\YO_NA\zeli" For Input As #1
 101111 If EOF(1) Then GoTo 1012
    Input #1, t(0), t(1), t(2), t(3), t(4), t(5)
    If t(0) = nz Then
-        xc = t(1): yc = t(2): hc = t(3): Frc = t(4): Glc = t(5)
+        Xc = t(1): Yc = t(2): hc = Val(t(3)): Frc = t(4): Glc = t(5)
         Else
             GoTo 101111
         End If
 1012 Close #1
-pXc.Text = xc: pYc.Text = yc: phc.Text = hc: pFrc.Text = Frc: pGlc.Text = Glc
+pXc.Text = Xc: pYc.Text = Yc: phc.Text = hc: pFrc.Text = Frc: pGlc.Text = Glc
 End Sub
 Private Sub nPlZeli_KeyDown(KeyCode As Integer, Shift As Integer)
 Dim z(1 To 10) As String
 Dim nz As String
-Dim xc As Single, yc As Single, hc As Single
+Dim Xc As Single, Yc As Single, hc As Single
 nz = pplZel
 If KeyCode = 13 Then
 1011    Open "D:\YO_NA\zeli" For Input As #1
 101111  If EOF(1) Then GoTo 1012
    Input #1, z(1), z(2), z(3), z(4), z(5), z(6)
-   If z(1) = nz Then xc = z(2): yc = z(3): hc = z(4): Fr = z(5): Gl = z(6): GoTo 1012
+   If z(1) = nz Then Xc = z(2): Yc = z(3): hc = z(4): Fr = z(5): Gl = z(6): GoTo 1012
         GoTo 101111
 1012    Close #1
-pXc.Text = xc: pYc.Text = yc: phc.Text = hc: pFrc.Text = Frc: pGlc.Text = Glc
+pXc.Text = Xc: pYc.Text = Yc: phc.Text = hc: pFrc.Text = Frc: pGlc.Text = Glc
     Else
 End If
 End Sub
@@ -3684,7 +3681,7 @@ End Sub
 
 Private Sub OZ6Oryd_Click()
 Dim Nop As Integer
-Dim Xop As Single, xc As Single, yc As Single, hc As Single
+Dim Xop As Single, Xc As Single, Yc As Single, hc As Single
 Dim rep As String
 Dim preps1 As Single, N1 As Single, dovisch1 As Single, ts As Single, dXtus As Single
 Dim Dt1 As Single, Ygolt As Single, Dovort1 As Single, yroven As Single, popvd1 As Single
@@ -3695,10 +3692,10 @@ Open App.Path & "\numberZeli" For Output As #1
 Write #1, nPlZeli
 Close #1
 
-xc = pXc: yc = pYc: hc = phc
+Xc = pXc: Yc = pYc: hc = phc
 Xop = bp6Oryd.pAks1X: Nop = 1: rep = pRep1
 If Xop <> 0 Then
-    OZ6or Nop, xc, yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
+    OZ6or Nop, Xc, Yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
     pvPric1.Text = preps1: pvN1.Text = Round(N1): pvDov1.Text = dovisch1: pvdXtus1.Text = dXtus: pvts1.Text = ts
     pvDt1.Text = Dt1: pvYgt1.Text = Ygolt: pvDovt1.Text = Dovort1: pvYr1.Text = Round(yroven): pvdD1.Text = Round(popvd1)
     pvdDov1.Text = Round(popvnap1)
@@ -3709,7 +3706,7 @@ Else
 End If
 Xop = bp6Oryd.pAks2X: Nop = 2: rep = pRep2
 If Xop <> 0 Then
-    OZ6or Nop, xc, yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
+    OZ6or Nop, Xc, Yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
     pvPric2.Text = preps1: pvN2.Text = Round(N1): pvDov2.Text = dovisch1: pvdXtus2.Text = dXtus: pvts2.Text = ts
     pvDt2.Text = Dt1: pvYgt2.Text = Ygolt: pvDovt2.Text = Dovort1: pvYr2.Text = Round(yroven): pvdD2.Text = Round(popvd1)
     pvdDov2.Text = Round(popvnap1)
@@ -3720,7 +3717,7 @@ Else
 End If
 Xop = bp6Oryd.pAks3X: Nop = 3: rep = pRep3
 If Xop <> 0 Then
-    OZ6or Nop, xc, yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
+    OZ6or Nop, Xc, Yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
     pvPric3.Text = preps1: pvN3.Text = Round(N1): pvDov3.Text = dovisch1: pvdXtus3.Text = dXtus: pvts3.Text = ts
     pvDt3.Text = Dt1: pvYgt3.Text = Ygolt: pvDovt3.Text = Dovort1: pvYr3.Text = Round(yroven): pvdD3.Text = Round(popvd1)
     pvdDov3.Text = Round(popvnap1)
@@ -3732,7 +3729,7 @@ End If
 
 Xop = bp6Oryd.pKal1X: Nop = 4: rep = pRep4
 If Xop <> 0 Then
-    OZ6or Nop, xc, yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
+    OZ6or Nop, Xc, Yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
     pvPric4.Text = preps1: pvN4.Text = Round(N1): pvDov4.Text = dovisch1: pvdXtus4.Text = dXtus: pvts4.Text = ts
     pvDt4.Text = Dt1: pvYgt4.Text = Ygolt: pvDovt4.Text = Dovort1: pvYr4.Text = Round(yroven): pvdD4.Text = Round(popvd1)
     pvdDov4.Text = Round(popvnap1)
@@ -3743,7 +3740,7 @@ Else
 End If
 Xop = bp6Oryd.pKal2X: Nop = 5: rep = pRep5
 If Xop <> 0 Then
-    OZ6or Nop, xc, yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
+    OZ6or Nop, Xc, Yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
     pvPric5.Text = preps1: pvN5.Text = Round(N1): pvDov5.Text = dovisch1: pvdXtus5.Text = dXtus: pvts5.Text = ts
     pvDt5.Text = Dt1: pvYgt5.Text = Ygolt: pvDovt5.Text = Dovort1: pvYr5.Text = Round(yroven): pvdD5.Text = Round(popvd1)
     pvdDov5.Text = Round(popvnap1)
@@ -3754,7 +3751,7 @@ Else
 End If
 Xop = bp6Oryd.pKal3X: Nop = 6: rep = pRep6
 If Xop <> 0 Then
-    OZ6or Nop, xc, yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
+    OZ6or Nop, Xc, Yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
     pvPric6.Text = preps1: pvN6.Text = Round(N1): pvDov6.Text = dovisch1: pvdXtus6.Text = dXtus: pvts6.Text = ts
     pvDt6.Text = Dt1: pvYgt6.Text = Ygolt: pvDovt6.Text = Dovort1: pvYr6.Text = Round(yroven): pvdD6.Text = Round(popvd1)
     pvdDov6.Text = Round(popvnap1)
@@ -3766,7 +3763,7 @@ End If
 
 Xop = bp6Oryd.pOsk1X: Nop = 7: rep = pRep7
 If Xop <> 0 Then
-    OZ6or Nop, xc, yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
+    OZ6or Nop, Xc, Yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
     pvPric7.Text = preps1: pvN7.Text = Round(N1): pvDov7.Text = dovisch1: pvdXtus7.Text = dXtus: pvts7.Text = ts
     pvDt7.Text = Dt1: pvYgt7.Text = Ygolt: pvDovt7.Text = Dovort1: pvYr7.Text = Round(yroven): pvdD7.Text = Round(popvd1)
     pvdDov7.Text = Round(popvnap1)
@@ -3777,7 +3774,7 @@ Else
 End If
 Xop = bp6Oryd.pOsk2X: Nop = 8: rep = pRep8
 If Xop <> 0 Then
-    OZ6or Nop, xc, yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
+    OZ6or Nop, Xc, Yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
     pvPric8.Text = preps1: pvN8.Text = Round(N1): pvDov8.Text = dovisch1: pvdXtus8.Text = dXtus: pvts8.Text = ts
     pvDt8.Text = Dt1: pvYgt8.Text = Ygolt: pvDovt8.Text = Dovort1: pvYr8.Text = Round(yroven): pvdD8.Text = Round(popvd1)
     pvdDov8.Text = Round(popvnap1)
@@ -3788,7 +3785,7 @@ Else
 End If
 Xop = bp6Oryd.pOsk3X: Nop = 9: rep = pRep9
 If Xop <> 0 Then
-    OZ6or Nop, xc, yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
+    OZ6or Nop, Xc, Yc, hc, rep, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1
     pvPric9.Text = preps1: pvN9.Text = Round(N1): pvDov9.Text = dovisch1: pvdXtus9.Text = dXtus: pvts9.Text = ts
     pvDt9.Text = Dt1: pvYgt9.Text = Ygolt: pvDovt9.Text = Dovort1: pvYr9.Text = Round(yroven): pvdD9.Text = Round(popvd1)
     pvdDov9.Text = Round(popvnap1)
@@ -3800,7 +3797,7 @@ End If
 
 End Sub
 
-Sub OZ6or(ByVal Nop As Single, ByVal xc As Single, ByVal yc As Single, ByVal hc As Single, ByVal rep As String, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1)
+Sub OZ6or(ByVal Nop As Single, ByVal Xc As Single, ByVal Yc As Single, ByVal hc As Single, ByVal rep As String, preps1, N1, dovisch1, ts, dXtus, Dt1, Ygolt, Dovort1, yroven, popvd1, popvnap1)
 Dim v01 As Single, pop_v_N As Single, pop_v_Nk As Single, dN As Single, dddt1 As Single
 Dim epsDnO13 As Single, Xop As Single, Yop As Single, hop As Single, tz As Single
 Dim OH As Single
@@ -3843,9 +3840,9 @@ Dim Pi As Single, dhh1 As Single
 ras = 0: h = BP.ph:  hmet = BP.phmet
 If h = 0 Then h = 750
 dhh1 = (h - 750) + ((hmet - hop) / 10)
-   Xc1 = xc: Yc1 = yc: hc1 = hc
-   dx1 = xc - Xop
-60: dy1 = yc - Yop
+   Xc1 = Xc: Yc1 = Yc: hc1 = hc
+   dx1 = Xc - Xop
+60: dy1 = Yc - Yop
 61: dh1 = hc - hop
 Pi = 3.14159265358
 9010: Dt1 = Int(Sqr(dx1 ^ 2 + dy1 ^ 2) + 0.001)
@@ -4002,7 +3999,7 @@ End If
        daep = kpe * Yr1: preps1 = CInt(Pric1 + daep)
        End If
        If vzriv = "РГМ" Then dNtus1 = 0
-        Xc1 = xc: Yc1 = yc: hc1 = hc: yroven = Yr1
+        Xc1 = Xc: Yc1 = Yc: hc1 = hc: yroven = Yr1
 End Sub
 
 
@@ -4176,25 +4173,25 @@ Function getPozuvnOP(ByVal Nop As Integer) As String
 
 Select Case Nop
     Case 1
-        getPozuvnOP = "Десна1"
+        getPozuvnOP = labOr1
     Case 2
-        getPozuvnOP = "Десна2"
+        getPozuvnOP = labOr2
     Case 3
-        getPozuvnOP = "Десна3"
+        getPozuvnOP = labOr3
     Case 4
-        getPozuvnOP = "Самара1"
+        getPozuvnOP = labOr4
     Case 5
-        getPozuvnOP = "Самара2"
+        getPozuvnOP = labOr5
     Case 6
-        getPozuvnOP = "Самара3"
+        getPozuvnOP = labOr6
     Case 7
-        getPozuvnOP = "Корень1"
+        getPozuvnOP = labOr7
     Case 8
-        getPozuvnOP = "Корень2"
+        getPozuvnOP = labOr8
     Case 9
-        getPozuvnOP = "Корень3"
+        getPozuvnOP = labOr9
     Case Else
-        getPozuvnOP = "Десна1"
+        getPozuvnOP = labOr1
 End Select
 
 End Function
