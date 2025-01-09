@@ -17,8 +17,8 @@ Begin VB.Form OZ
    LinkTopic       =   "Form1"
    MDIChild        =   -1  'True
    Moveable        =   0   'False
-   ScaleHeight     =   3030
-   ScaleWidth      =   4560
+   ScaleHeight     =   10935
+   ScaleWidth      =   20250
    Begin VB.CommandButton okPopravki 
       BackColor       =   &H00FF8080&
       Caption         =   "Команда"
@@ -1384,7 +1384,7 @@ Begin VB.Form OZ
          TabIndex        =   167
          Text            =   "0"
          Top             =   2160
-         Width           =   1800
+         Width           =   2200
       End
       Begin VB.CommandButton Command3 
          BackColor       =   &H0080FF80&

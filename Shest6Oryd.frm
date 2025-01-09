@@ -6,8 +6,8 @@ Begin VB.Form Shest6Oryd
    ClientTop       =   450
    ClientWidth     =   11925
    LinkTopic       =   "Form1"
-   ScaleHeight     =   7395
-   ScaleWidth      =   11925
+   ScaleHeight     =   10935
+   ScaleWidth      =   20250
    StartUpPosition =   1  'CenterOwner
    WindowState     =   2  'Maximized
    Begin VB.CommandButton otprKom 
@@ -216,7 +216,7 @@ Begin VB.Form Shest6Oryd
          TabIndex        =   131
          Text            =   "0"
          Top             =   2800
-         Width           =   2000
+         Width           =   2200
       End
       Begin VB.CommandButton OZ6Oryd 
          BackColor       =   &H00FF8080&

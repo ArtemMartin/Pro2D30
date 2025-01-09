@@ -94,11 +94,11 @@ Begin VB.Form Zelkagdomy6
          EndProperty
          ForeColor       =   &H00008080&
          Height          =   450
-         Left            =   2000
+         Left            =   1300
          TabIndex        =   75
          Text            =   "0"
          Top             =   2400
-         Width           =   1500
+         Width           =   2200
       End
       Begin VB.Label Label36 
          BackColor       =   &H00C0C0C0&
@@ -159,7 +159,7 @@ Begin VB.Form Zelkagdomy6
       End
       Begin VB.Label Label33 
          BackColor       =   &H00C0C0C0&
-         Caption         =   "№ Пл. Цели"
+         Caption         =   "№ Цели"
          BeginProperty Font 
             Name            =   "Bookman Old Style"
             Size            =   14.25
@@ -174,7 +174,7 @@ Begin VB.Form Zelkagdomy6
          Left            =   100
          TabIndex        =   79
          Top             =   2400
-         Width           =   1800
+         Width           =   1200
       End
    End
    Begin VB.Frame frOr3 
@@ -261,11 +261,11 @@ Begin VB.Form Zelkagdomy6
          EndProperty
          ForeColor       =   &H00004080&
          Height          =   450
-         Left            =   2000
+         Left            =   1300
          TabIndex        =   66
          Text            =   "0"
          Top             =   2400
-         Width           =   1500
+         Width           =   2200
       End
       Begin VB.Label Label32 
          BackColor       =   &H00C0C0C0&
@@ -326,7 +326,7 @@ Begin VB.Form Zelkagdomy6
       End
       Begin VB.Label Label29 
          BackColor       =   &H00C0C0C0&
-         Caption         =   "№ Пл. Цели"
+         Caption         =   "№ Цели"
          BeginProperty Font 
             Name            =   "Bookman Old Style"
             Size            =   14.25
@@ -341,7 +341,7 @@ Begin VB.Form Zelkagdomy6
          Left            =   100
          TabIndex        =   70
          Top             =   2400
-         Width           =   1800
+         Width           =   1200
       End
    End
    Begin VB.Frame frOr6 
@@ -428,11 +428,11 @@ Begin VB.Form Zelkagdomy6
          EndProperty
          ForeColor       =   &H00808000&
          Height          =   450
-         Left            =   2000
+         Left            =   1300
          TabIndex        =   57
          Text            =   "0"
          Top             =   2400
-         Width           =   1500
+         Width           =   2200
       End
       Begin VB.Label Label28 
          BackColor       =   &H00C0C0C0&
@@ -493,7 +493,7 @@ Begin VB.Form Zelkagdomy6
       End
       Begin VB.Label Label25 
          BackColor       =   &H00C0C0C0&
-         Caption         =   "№ Пл. Цели"
+         Caption         =   "№ Цели"
          BeginProperty Font 
             Name            =   "Bookman Old Style"
             Size            =   14.25
@@ -508,7 +508,7 @@ Begin VB.Form Zelkagdomy6
          Left            =   100
          TabIndex        =   61
          Top             =   2400
-         Width           =   1800
+         Width           =   1200
       End
    End
    Begin VB.CommandButton Command2 
@@ -579,11 +579,11 @@ Begin VB.Form Zelkagdomy6
          EndProperty
          ForeColor       =   &H00800080&
          Height          =   450
-         Left            =   2000
+         Left            =   1300
          TabIndex        =   55
          Text            =   "0"
          Top             =   2400
-         Width           =   1500
+         Width           =   2200
       End
       Begin VB.TextBox phc8 
          BeginProperty Font 
@@ -641,7 +641,7 @@ Begin VB.Form Zelkagdomy6
       End
       Begin VB.Label Label24 
          BackColor       =   &H00C0C0C0&
-         Caption         =   "№ Пл. Цели"
+         Caption         =   "№ Цели"
          BeginProperty Font 
             Name            =   "Bookman Old Style"
             Size            =   14.25
@@ -656,7 +656,7 @@ Begin VB.Form Zelkagdomy6
          Left            =   100
          TabIndex        =   44
          Top             =   2400
-         Width           =   1800
+         Width           =   1200
       End
       Begin VB.Label Label23 
          BackColor       =   &H00C0C0C0&
@@ -746,11 +746,11 @@ Begin VB.Form Zelkagdomy6
          EndProperty
          ForeColor       =   &H00C00000&
          Height          =   450
-         Left            =   2000
+         Left            =   1300
          TabIndex        =   54
          Text            =   "0"
          Top             =   2400
-         Width           =   1500
+         Width           =   2200
       End
       Begin VB.TextBox phc7 
          BeginProperty Font 
@@ -808,7 +808,7 @@ Begin VB.Form Zelkagdomy6
       End
       Begin VB.Label Label20 
          BackColor       =   &H00C0C0C0&
-         Caption         =   "№ Пл. Цели"
+         Caption         =   "№ Цели"
          BeginProperty Font 
             Name            =   "Bookman Old Style"
             Size            =   14.25
@@ -823,7 +823,7 @@ Begin VB.Form Zelkagdomy6
          Left            =   100
          TabIndex        =   36
          Top             =   2400
-         Width           =   1800
+         Width           =   1200
       End
       Begin VB.Label Label19 
          BackColor       =   &H00C0C0C0&
@@ -913,11 +913,11 @@ Begin VB.Form Zelkagdomy6
          EndProperty
          ForeColor       =   &H00008000&
          Height          =   450
-         Left            =   2000
+         Left            =   1300
          TabIndex        =   53
          Text            =   "0"
          Top             =   2400
-         Width           =   1500
+         Width           =   2200
       End
       Begin VB.TextBox phc5 
          BeginProperty Font 
@@ -975,7 +975,7 @@ Begin VB.Form Zelkagdomy6
       End
       Begin VB.Label Label16 
          BackColor       =   &H00C0C0C0&
-         Caption         =   "№ Пл. Цели"
+         Caption         =   "№ Цели"
          BeginProperty Font 
             Name            =   "Bookman Old Style"
             Size            =   14.25
@@ -990,7 +990,7 @@ Begin VB.Form Zelkagdomy6
          Left            =   100
          TabIndex        =   28
          Top             =   2400
-         Width           =   1800
+         Width           =   1200
       End
       Begin VB.Label Label15 
          BackColor       =   &H00C0C0C0&
@@ -1080,11 +1080,11 @@ Begin VB.Form Zelkagdomy6
          EndProperty
          ForeColor       =   &H000040C0&
          Height          =   450
-         Left            =   2000
+         Left            =   1300
          TabIndex        =   52
          Text            =   "0"
          Top             =   2400
-         Width           =   1500
+         Width           =   2200
       End
       Begin VB.TextBox phc4 
          BeginProperty Font 
@@ -1142,7 +1142,7 @@ Begin VB.Form Zelkagdomy6
       End
       Begin VB.Label Label12 
          BackColor       =   &H00C0C0C0&
-         Caption         =   "№ Пл. Цели"
+         Caption         =   "№ Цели"
          BeginProperty Font 
             Name            =   "Bookman Old Style"
             Size            =   14.25
@@ -1157,7 +1157,7 @@ Begin VB.Form Zelkagdomy6
          Left            =   100
          TabIndex        =   20
          Top             =   2400
-         Width           =   1800
+         Width           =   1200
       End
       Begin VB.Label Label11 
          BackColor       =   &H00C0C0C0&
@@ -1247,11 +1247,11 @@ Begin VB.Form Zelkagdomy6
          EndProperty
          ForeColor       =   &H000000FF&
          Height          =   450
-         Left            =   2000
+         Left            =   1300
          TabIndex        =   51
          Text            =   "0"
          Top             =   2400
-         Width           =   1500
+         Width           =   2200
       End
       Begin VB.TextBox phc2 
          BeginProperty Font 
@@ -1309,7 +1309,7 @@ Begin VB.Form Zelkagdomy6
       End
       Begin VB.Label Label8 
          BackColor       =   &H00C0C0C0&
-         Caption         =   "№ Пл. Цели"
+         Caption         =   "№ Цели"
          BeginProperty Font 
             Name            =   "Bookman Old Style"
             Size            =   14.25
@@ -1324,7 +1324,7 @@ Begin VB.Form Zelkagdomy6
          Left            =   100
          TabIndex        =   12
          Top             =   2400
-         Width           =   1800
+         Width           =   1200
       End
       Begin VB.Label Label7 
          BackColor       =   &H00C0C0C0&
@@ -1412,11 +1412,11 @@ Begin VB.Form Zelkagdomy6
             Strikethrough   =   0   'False
          EndProperty
          Height          =   450
-         Left            =   2000
+         Left            =   1300
          TabIndex        =   50
          Text            =   "0"
          Top             =   2400
-         Width           =   1500
+         Width           =   2200
       End
       Begin VB.TextBox phc1 
          BeginProperty Font 
@@ -1471,7 +1471,7 @@ Begin VB.Form Zelkagdomy6
       End
       Begin VB.Label Label4 
          BackColor       =   &H00C0C0C0&
-         Caption         =   "№ Пл. Цели"
+         Caption         =   "№ Цели"
          BeginProperty Font 
             Name            =   "Bookman Old Style"
             Size            =   14.25
@@ -1485,7 +1485,7 @@ Begin VB.Form Zelkagdomy6
          Left            =   100
          TabIndex        =   4
          Top             =   2400
-         Width           =   1800
+         Width           =   1200
       End
       Begin VB.Label Label3 
          BackColor       =   &H00C0C0C0&
