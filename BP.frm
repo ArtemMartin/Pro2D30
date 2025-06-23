@@ -2106,7 +2106,7 @@ Private Sub polMeteo_Click()
 Dim dtT As Single, Aw As Single, W As Single
  Dim h As Single
 Dim t(1 To 10) As String
-Open "D:\YO_NA\sostMeteooo\dist\meteo.txt" For Input As #1
+Open "D:\YO_NA\sostMeteooo\meteo.txt" For Input As #1
 1: If EOF(1) Then GoTo 5
 Input #1, t(1), t(2), t(3), t(4)
 If t(1) < 1000 Then
@@ -2720,7 +2720,7 @@ End If
 End Sub
 Function PolychitByl(ByVal hbyl As Single, dtT As Single, Aw As Single, W As Single) As Single
 Dim t(1 To 4) As Single
-Open "D:\YO_NA\sostMeteooo\dist\meteo.txt" For Input As #1
+Open "D:\YO_NA\sostMeteooo\meteo.txt" For Input As #1
 11: If EOF(1) Then GoTo 51
 Input #1, t(1), t(2), t(3), t(4)
 If t(1) = hbyl Then
