@@ -1573,7 +1573,7 @@ End If
         Xb = bp6Oryd.pKal1X: Yb = bp6Oryd.pKal1Y: hb = bp6Oryd.pKal1h: dXtus = Shest6Oryd.pvdXtus4
         Dt = Shest6Oryd.pvDt4: Ygolt = Shest6Oryd.pvYgt4: snar = Shest6Oryd.pKal1Snar: zar = Shest6Oryd.pKal1Zar
         podRASCHETPRIST6orXY Xr, Yr, Xb, Yb, hb, dXtus, Dt, Ygolt, snar, zar, dD, dDov, dPr, dN
-        pvkorD3 = dD: pvkorDov3 = dDov: pvkorPr3 = dPr: pvkordN4 = dN
+        pvkorD4 = dD: pvkorDov4 = dDov: pvkorPr4 = dPr: pvkordN4 = dN
 End If
 
  Xr = pXr5:  Yr = pYr5
